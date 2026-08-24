@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accresca — Veredicto Escalera al Éxito</title>
+<meta name="description" content="Análisis del modelo de Accresca (consultora de crecimiento para proveedores mineros) aplicando la metodología Escalera al Éxito, con consejos accionables.">
+<meta property="og:title" content="Accresca — Veredicto Escalera al Éxito">
+<meta property="og:description" content="Análisis del modelo de negocio de Accresca con la metodología Escalera al Éxito.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --navy: #0f172a;
+    --accent: #2563eb;
+    --green: #10B981;
+    --amber: #f59e0b;
+    --slate: #64748b;
+    --border: #e2e8f0;
+    --radius-lg: 20px;
+    --radius-sm: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--navy);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  header { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid var(--border); }
+  .kicker { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--slate); font-weight: 700; }
+  h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -.02em; margin: 6px 0 10px; }
+  .sub { color: var(--slate); font-size: 1.02rem; max-width: 720px; }
+
+  h2 { font-size: 1.35rem; font-weight: 750; margin: 44px 0 16px; padding-left: 14px; border-left: 5px solid var(--accent); }
+  h3 { font-size: 1.05rem; font-weight: 700; margin: 20px 0 8px; color: var(--navy); }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; margin: 16px 0; box-shadow: 0 1px 3px rgba(15,23,42,.04); }
+
+  .grid { display: grid; gap: 14px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .g4 { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+
+  .metric { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px; text-align: center; }
+  .metric .num { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+  .metric .lbl { font-size: 12px; color: var(--slate); margin-top: 4px; }
+
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 700; }
+  .pill.green { background: rgba(16,185,129,.13); color: #059669; border: 1px solid rgba(16,185,129,.35); }
+  .pill.amber { background: rgba(245,158,11,.13); color: #b45309; border: 1px solid rgba(245,158,11,.35); }
+  .pill.blue  { background: rgba(37,99,235,.10); color: var(--accent); border: 1px solid rgba(37,99,235,.30); }
+  .pill.gray  { background: rgba(100,116,139,.12); color: #475569; border: 1px solid rgba(100,116,139,.30); }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .9rem; }
+  th { background: #f1f5f9; color: var(--navy); text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border); font-weight: 700; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:hover td { background: #f8fafc; }
+
+  .ladder { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; margin: 16px 0; }
+  .ladder .step-title { font-size: 1.05rem; font-weight: 750; margin-bottom: 8px; }
+  .verdict { display: inline-block; padding: 4px 14px; border-radius: 100px; font-size: 13px; font-weight: 800; margin-left: 8px; }
+
+  .advice { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 22px; margin: 14px 0; }
+  .advice .n { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; font-size: 14px; margin-right: 10px; }
+  .advice h3 { display: inline; }
+  .advice .why { color: var(--slate); font-size: .92rem; margin: 8px 0 4px; }
+  .advice .how { font-size: .92rem; }
+  .advice .how b { color: var(--accent); }
+
+  .note { background: rgba(37,99,235,.06); border: 1px solid rgba(37,99,235,.22); border-radius: var(--radius-lg); padding: 16px 20px; margin: 18px 0; font-size: .92rem; }
+  .foot { text-align: center; color: var(--slate); font-size: 12px; margin-top: 48px; }
+  .foot a { color: var(--accent); text-decoration: none; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; }
+  .src { color: var(--slate); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Análisis de negocio · Metodología Escalera al Éxito</div>
+  <h1>Accresca — Veredicto</h1>
+  <div class="sub">Evaluación del modelo de Accresca (consultora de crecimiento y desempeño para proveedores de la minería) usando la Escalera al Éxito: ¿pueden cumplir? → ¿dónde está el dinero? → ¿dónde ponen el foco? → ¿cuál es el plan?</div>
+</header>
+
+<!-- ============ RESUMEN ============ -->
+<h2>Resumen del veredicto</h2>
+<div class="card">
+  <table>
+    <tr><th>Escalón</th><th>Fórmula</th><th>Pregunta</th><th>Estado</th></tr>
+    <tr><td><b>1</b></td><td>P × M × R</td><td>¿Pueden cumplir?</td><td><span class="pill amber">Aprueba con condición</span></td></tr>
+    <tr><td><b>2</b></td><td>N × Pv × Map</td><td>¿Dónde está el dinero?</td><td><span class="pill green">Aprueba</span></td></tr>
+    <tr><td><b>3</b></td><td>F × Mt × E</td><td>¿Dónde ponen el foco?</td><td><span class="pill amber">A medias</span></td></tr>
+    <tr><td><b>4</b></td><td>Pv × Mt × Pc</td><td>¿Cuál es el plan?</td><td><span class="pill gray">Débil</span></td></tr>
+  </table>
+  <div class="note"><b>Veredicto final:</b> negocio válido en fase cero. La materia prima es de primera (3 socios ex-BHP/Escondida/Codelco, mercado de US$23.000M y ~8.000 proveedores con dolor real). Lo que falta no es talento ni mercado — es ejecución comercial: prueba social, pipeline, meta declarada y un modelo que escale más allá del tiempo de 3 socios.</div>
+</div>
+
+<!-- ============ ESCALÓN 1 ============ -->
+<h2>Escalón 1 · P × M × R — ¿Pueden cumplir?</h2>
+<div class="ladder">
+  <div class="step-title">P — Vector de Diferenciación <span class="verdict" style="background:rgba(16,185,129,.13);color:#059669;">Sólido</span></div>
+  <ul>
+    <li>Red minera de primera línea (ex-BHP, Minera Escondida, Codelco)</li>
+    <li>Modelo integral de 4 pilares: Crecer · Construir · Mejorar · Escalar</li>
+    <li>Método propio con ejecución "en terreno, no desde un informe"</li>
+    <li>Combinación inusual: comercial + operaciones + tecnología</li>
+    <li>Credenciales comprobables (portafolio Mine-to-Mill ~US$500M, 50+ transformaciones)</li>
+  </ul>
+
+  <div class="step-title" style="margin-top:20px;">M — Mercado (con fuente real)</div>
+  <div class="grid g4">
+    <div class="metric"><div class="num">~8.000</div><div class="lbl">proveedores mineros (APRIMIN)</div></div>
+    <div class="metric"><div class="num">US$23.147M</div><div class="lbl">gasto anual en proveedores (Cochilco 2023)</div></div>
+    <div class="metric"><div class="num">54–65%</div><div class="lbl">son micro/pequeñas (las que más sufren)</div></div>
+    <div class="metric"><div class="num">806</div><div class="lbl">empresas en encuesta innovación (Cochilco 2025)</div></div>
+  </div>
+  <p class="src" style="margin-top:8px;">Dolor documentado: financiamiento, escala, estándares y certificación (Encuesta Innovación en Proveedores, Cochilco dic-2025).</p>
+
+  <div class="step-title" style="margin-top:20px;">R — Capacidad de Respuesta <span class="verdict" style="background:rgba(245,158,11,.13);color:#b45309;">Amarillo</span></div>
+  <p>Punto crítico: sitio con métricas "0+" sin llenar, sin casos de éxito públicos, sin LinkedIn, sin prensa, sin registro visible (SII/RUT) como Accresca. Es una operación en fase cero.</p>
+  <p><b>Lectura:</b> no es rojo — el problema no es que no sepan entregar (3 socios ex-mineras pueden de sobra), es que aún no producen prueba social. Se destraba con 2-3 casos reales documentados.</p>
+</div>
+
+<!-- ============ ESCALÓN 2 ============ -->
+<h2>Escalón 2 · N × Pv × Map — ¿Dónde está el dinero?</h2>
+<div class="ladder">
+  <p><b>N (Necesidad):</b> alta y documentada. Las PYMES proveedoras no saben entrar, calificar ni escalar. Dolor estructural, no cosmético.</p>
+  <p><b>Pv (Potencial de venta):</b> ticket típico de consultoría B2B en Chile = $450.000–$1.800.000 CLP/mes (fee fijo), o UF/hora según seniority. Pv medio-alto, pero es servicio (no producto escalable).</p>
+  <p style="margin-top:14px;"><b>Mapa de dinero (Potencial × Esfuerzo):</b></p>
+  <table>
+    <tr><th>Prioridad</th><th>Segmento</th><th>Por qué</th></tr>
+    <tr><td><span class="pill green">Foco primario</span></td><td>PYMES proveedoras ($1–10M USD de facturación) que quieren entrar/crecer en minería</td><td>El grueso del mercado (54–65%), dolor agudo, paga por resultados</td></tr>
+    <tr><td><span class="pill blue">Volumen</span></td><td>Talleres/asesorías puntuales (calificación SICEP, entry)</td><td>Ticket menor, recurrente</td></tr>
+    <tr><td><span class="pill gray">Mantenimiento</span></td><td>Proveedores ya grandes</td><td>Tienen estrategia interna propia</td></tr>
+  </table>
+</div>
+
+<!-- ============ ESCALÓN 3 ============ -->
+<h2>Escalón 3 · F × Mt × E — ¿Dónde ponen el foco?</h2>
+<div class="ladder">
+  <p><b>F (Foco):</b> bien definido — "proveedores de la minería", nicho estrecho y rico. Correcto.</p>
+  <p><b>Mt (Meta):</b> no declarada públicamente (otra señal de fase cero). Deberían tener: nº de clientes activos, ingresos recurrentes, casos cerrados.</p>
+  <p><b>E (Esfuerzo):</b> alto. Consultoría boutique = 3 socios vendiendo su tiempo. El esfuerzo no escala sin producto/curso/proceso empaquetado.</p>
+</div>
+
+<!-- ============ ESCALÓN 4 ============ -->
+<h2>Escalón 4 · Pv × Mt × Pc — ¿Cuál es el plan?</h2>
+<div class="ladder">
+  <p><b>Pc (Plan de Cuenta):</b> sin evidencia pública de pipeline, casos ni plan de captación. El único canal visible es un formulario web + email. Sin TAE, sin casos, sin "quién es el primer cliente".</p>
+  <div class="note"><b>Aquí está la debilidad real:</b> tienen todo el capital humano (P) y un mercado enorme (M), pero no se ve el plan de ejecución ni la prueba de que ya están vendiendo.</div>
+</div>
+
+<!-- ============ CONSEJOS ============ -->
+<h2>Consejos para Ramón</h2>
+<div class="sub" style="margin-bottom:16px;">Serie accionable, en orden de impacto. Cada uno con el "por qué" y el "cómo".</div>
+
+<div class="advice">
+  <span class="n">1</span><h3>Llena los "0+" del sitio hoy</h3>
+  <div class="why">Una consultora que no publica métricas transmite que no ha hecho nada. El "0+ años / 0 semanas / 0 meses" del sitio es gratis arreglarlo y es lo primero que ve un cliente.</div>
+  <div class="how"><b>Cómo:</b> suma los años reales de trayectoria combinada de los 3 socios (son 60+ años de minería), el nº de transformaciones lideradas (50+) y el portafolio Mine-to-Mill (US$500M). No inventar: usar cifras que cada socio pueda respaldar.</div>
+</div>
+
+<div class="advice">
+  <span class="n">2</span><h3>Consigue 2–3 casos documentados antes de vender más</h3>
+  <div class="why">El vector de diferenciación es de lujo (ex-BHP/Escondida/Codelco), pero sin prueba social no convierte. Hoy el "R" de la escalera es lo que frena el negocio.</div>
+  <div class="how"><b>Cómo:</b> primeros clientes con honorario reducido a cambio de testimonio + estudio de caso público. Dos casos reales valen más que todo el diseño del sitio.</div>
+</div>
+
+<div class="advice">
+  <span class="n">3</span><h3>Empaqueta el método en un producto de entrada</h3>
+  <div class="why">Hoy venden horas de 3 socios — no escala. El advisory premium es el techo; el diagnóstico empaquetado es el volumen.</div>
+  <div class="how"><b>Cómo:</b> un "Diagnóstico de Madurez Comercial" (producto fijo, precio fijo, 2 semanas) como puerta de entrada, y el advisory premium como siguiente paso. Producto + servicio, no solo horas.</div>
+</div>
+
+<div class="advice">
+  <span class="n">4</span><h3>Declara la meta (Mt) internamente</h3>
+  <div class="why">Sin meta no hay foco medible. La Escalera exige saber a qué número se apunta para priorizar.</div>
+  <div class="how"><b>Cómo:</b> define 3 números: nº de clientes activos a 12 meses, ingresos recurrentes mensuales objetivo, y nº de casos cerrados. Revisa trimestral.</div>
+</div>
+
+<div class="advice">
+  <span class="n">5</span><h3>Construye un pipeline visible (TAE)</h3>
+  <div class="why">"Si no está en la tabla de acciones, no existe." Hoy el único canal es un formulario web pasivo.</div>
+  <div class="how"><b>Cómo:</b> una tabla simple: empresa, servicio, valor estimado, campeón interno, próximo contacto, fecha. Los 3 socios la revisan semanal. Usar la red ex-BHP/Escondida para los primeros 10 contactos cálidos.</div>
+</div>
+
+<div class="advice">
+  <span class="n">6</span><h3>Publica prueba social en LinkedIn</h3>
+  <div class="why">Accresca no tiene LinkedIn propio; Reantu sí (2–10 empleados). La red minera de los socios es el activo más barato de activar.</div>
+  <div class="how"><b>Cómo:</b> contenido de los 3 socios hablando de casos (anónimos si es necesario), insights de "cómo venderle a las mineras", y el posicionamiento de la marca Accresca. Es el canal de menor costo y mayor retorno en este nicho.</div>
+</div>
+
+<div class="advice">
+  <span class="n">7</span><h3>No compitas por precio — vende la red</h3>
+  <div class="why">La "Regla del 10%": un 10% de innovación te saca de la guerra de precio. El 10% de Accresca es que los socios vivieron adentro de las mineras que son los clientes finales.</div>
+  <div class="how"><b>Cómo:</b> en el pitch, no vender "consultoría de crecimiento" (commodity). Vender "sabemos cómo deciden las mineras porque estuvimos adentro". Eso no lo puede copiar una consultora genérica.</div>
+</div>
+
+<div class="advice">
+  <span class="n">8</span><h3>Decide si es negocio o startup (y sé honesto con eso)</h3>
+  <div class="why">Como servicio de 3 socios, es un negocio de alto ticket con techo bajo pero riesgo bajo. Para escalar necesita producto (curso, diagnóstico empaquetado, o una capa tecnológica).</div>
+  <div class="how"><b>Cómo:</b> no es malo ser boutique de alto ticket — es un gran negocio de lifestyle. Pero si la ambición es escalar, el camino pasa por empaquetar (consejo 3) y eventualmente una capa SaaS. Definir cuál es, para no gastar energía en el camino equivocado.</div>
+</div>
+
+<div class="note"><b>Matiz honesto:</b> este análisis se hizo sobre datos públicos (sitio + mercado). Si Accresca ya tiene clientes, pipeline y meta internos que no publica, el Escalón 4 (el más débil) puede estar en verde en privado. Lo que se ve desde afuera es un negocio sólido en su estructura, con capital humano de élite, que aún no muestra tracción.</div>
+
+<div class="foot">
+  Generado con la metodología Escalera al Éxito · Fuentes: accresca.com · aprimin.cl · cochilco.cl · mineriayfuturo.cl<br>
+  <a href="https://accresca.com">accresca.com</a>
+</div>
+
+</div>
+</body>
+</html>
